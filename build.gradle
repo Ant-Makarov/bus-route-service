@@ -31,10 +31,16 @@ allprojects {
         implementation 'org.springframework.boot:spring-boot-starter-validation'
         implementation 'org.springframework.boot:spring-boot-starter-web'
         implementation 'org.modelmapper:modelmapper:3.2.0'
+        implementation 'org.springframework.boot:spring-boot-starter-log4j2'
         compileOnly 'org.projectlombok:lombok'
         runtimeOnly 'org.postgresql:postgresql'
         annotationProcessor 'org.projectlombok:lombok'
         testImplementation 'org.springframework.boot:spring-boot-starter-test'
+        configurations {
+            all {
+                exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging'
+            }
+        }
     }
 
     tasks.named('test') {
