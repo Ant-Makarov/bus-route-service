@@ -4,10 +4,10 @@
         <Console name="Console" target="SYSTEM_OUT">
             <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
         </Console>
-        <File name="File" fileName="logs/payment-service.log">
+        <File name="File" fileName="logs/ticket-management-service.log">
             <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
         </File>
-        <File name="Root" fileName="logs/payment-service-root.log">
+        <File name="Root" fileName="logs/ticket-management-service-root.log">
             <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
         </File>
     </Appenders>
@@ -17,7 +17,7 @@
             <AppenderRef ref="Root"/>
         </Root>
 
-        <Logger name="com.fintechband.controllers.PaymentsController" level="debug" additivity="false">
+        <Logger name="com.fintechband.controllers.TicketsController" level="debug" additivity="false">
             <AppenderRef ref="File"/>
         </Logger>
         <Logger name="com.fintechband.services.impl.PaymentsServiceImpl" level="debug" additivity="false">

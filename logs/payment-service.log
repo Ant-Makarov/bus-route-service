@@ -26,9 +26,9 @@
 11:25:06.513 [http-nio-8081-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 11:25:06.513 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
 11:25:06.514 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 0 ms
-11:25:06.606 [http-nio-8081-exec-1] INFO  com.fintechband.controllers.PaymentController - Received payment creation request with PAYLOAD : com.fintechband.dto.PaymentDTO@684cd34e
-11:26:56.757 [http-nio-8081-exec-2] INFO  com.fintechband.controllers.PaymentController - Received payment creation request with PAYLOAD : PaymentDTO(payersName=i, amount=450)
-11:30:12.720 [http-nio-8081-exec-4] INFO  com.fintechband.controllers.PaymentController - Received payment status request with PAYLOAD : f60b6873-9a97-4289-890c-4a6e0b713a08
-11:31:12.654 [http-nio-8081-exec-1] INFO  com.fintechband.controllers.PaymentController - Received payment status request with PAYLOAD : f60b6873-9a97-4289-890c-4a6e0b713a08
-11:32:37.188 [http-nio-8081-exec-4] INFO  com.fintechband.controllers.PaymentController - Received payment status request with PAYLOAD : f60b6873-9a97-4289-890c-4a6e0b713a08
+11:25:06.606 [http-nio-8081-exec-1] INFO  com.fintechband.controllers.PaymentsController - Received payment creation request with PAYLOAD : com.fintechband.dto.PaymentDTO@684cd34e
+11:26:56.757 [http-nio-8081-exec-2] INFO  com.fintechband.controllers.PaymentsController - Received payment creation request with PAYLOAD : PaymentDTO(payersName=i, amount=450)
+11:30:12.720 [http-nio-8081-exec-4] INFO  com.fintechband.controllers.PaymentsController - Received payment status request with PAYLOAD : f60b6873-9a97-4289-890c-4a6e0b713a08
+11:31:12.654 [http-nio-8081-exec-1] INFO  com.fintechband.controllers.PaymentsController - Received payment status request with PAYLOAD : f60b6873-9a97-4289-890c-4a6e0b713a08
+11:32:37.188 [http-nio-8081-exec-4] INFO  com.fintechband.controllers.PaymentsController - Received payment status request with PAYLOAD : f60b6873-9a97-4289-890c-4a6e0b713a08
 11:32:37.229 [http-nio-8081-exec-4] DEBUG com.fintechband.exceptions.PaymentServiceExceptionHandler - com.fintechband.exceptions.PaymentNotFoundException: Payment with id f60b6873-9a97-4289-890c-4a6e0b713a08 wasn't found!

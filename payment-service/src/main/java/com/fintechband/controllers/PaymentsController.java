@@ -2,7 +2,7 @@ package com.fintechband.controllers;
 
 import com.fintechband.dto.PaymentDTO;
 import com.fintechband.exceptions.PaymentCreationException;
-import com.fintechband.services.PaymentService;
+import com.fintechband.services.PaymentsService;
 import com.fintechband.util.Code;
 import com.fintechband.util.PaymentStatus;
 import jakarta.validation.Valid;
@@ -20,9 +20,9 @@ import static com.fintechband.exceptions.PaymentCreationException.createErrorMes
 @RequiredArgsConstructor
 @Slf4j
 @RequestMapping("/api")
-public class PaymentController {
+public class PaymentsController {
 
-    private final PaymentService paymentService;
+    private final PaymentsService paymentsService;
 
     @PostMapping("/payments")
     public Map<String, UUID> createPayment(@RequestBody @Valid PaymentDTO dto, BindingResult bindingResult) {
@@ -32,12 +32,12 @@ public class PaymentController {
                     HttpStatus.BAD_REQUEST);
         }
 
-        return paymentService.createPayment(dto);
+        return paymentsService.createPayment(dto);
     }
 
     @GetMapping("/payments/{id}/status")
     public Map<UUID, PaymentStatus> getPaymentStatus(@PathVariable(name = "id") UUID id) {
         log.info("Received payment status request with PAYLOAD : {}", id);
-        return paymentService.getPaymentStatus(id);
+        return paymentsService.getPaymentStatus(id);
     }
 }

@@ -1,4 +1,5 @@
 rootProject.name = "bus-route-service"
 include 'common-utils'
 include 'payment-service'
+include 'ticket-management-service'
 

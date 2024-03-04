@@ -3,8 +3,8 @@ package com.fintechband.services.impl;
 import com.fintechband.dto.PaymentDTO;
 import com.fintechband.exceptions.PaymentNotFoundException;
 import com.fintechband.models.Payment;
-import com.fintechband.repositories.PaymentRepository;
-import com.fintechband.services.PaymentService;
+import com.fintechband.repositories.PaymentsRepository;
+import com.fintechband.services.PaymentsService;
 import com.fintechband.util.Code;
 import com.fintechband.util.PaymentStatus;
 import lombok.RequiredArgsConstructor;
@@ -21,9 +21,9 @@ import java.util.UUID;
 
 @Service
 @RequiredArgsConstructor
-public class PaymentServiceImpl implements PaymentService {
+public class PaymentsServiceImpl implements PaymentsService {
 
-    private final PaymentRepository repository;
+    private final PaymentsRepository repository;
     private final ModelMapper mapper;
     private final Clock clock;
 

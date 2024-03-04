@@ -6,7 +6,7 @@ import com.fintechband.util.PaymentStatus;
 import java.util.Map;
 import java.util.UUID;
 
-public interface PaymentService {
+public interface PaymentsService {
 
     Map<String, UUID> createPayment(PaymentDTO dto);
 
